@@ -59,6 +59,7 @@ JQUERY METHOD
              <img src="puppies/qiutiandong.jpg">
              <img src="puppies/doggy.jpg">
          </div>
+         
          <script>
              $(document).ready(function(){
                  $("button").click(function(){
@@ -164,4 +165,90 @@ JQUERY EFFECTS
                      $("two").fadeOut("fast");
                  });
              });
+         </script>
+点了按钮之后照片会消失
+
+<!-- fadeIn() -->  be used to fade in a selected element
+     $(selector).fadeIn(speed, callback);
+
+         <script>
+             $(document).ready(function(){
+                 $("button").click(function(){
+                     $("one").fadeIn("slow");
+                     $("two").fadeIn("fast");
+                 });
+             });
+        </script>
+         <button>Namaste!</button>>
+         <div class="fade">
+             <div id="one" style="width:2200; height:60px; display:none; background-color:orange;"></div><br>
+             <div id="two" style="width:2200; height:60px; display:none; background-color:white;"></div><br>
+         </div>
+
+<!-- slidedown() -->  be used to slide down a selected element
+     $(selector).slidedown(speed, callback);
+
+<!-- slideup() -->  be used to slide up a selected element
+     $(selector).slideup(speed, callback);
+
+<!-- slidetoggle() -->  be used to toggles between the slideup() and slidedown() methods
+     $(selector).slidetoggle(speed, callback);
+
+         <button>slide</button>
+         <div id="div1" style="width:90px; height:60px; background-color: pink"></div>
+         <script>
+             $("button").on("click",function(){
+                 $("#div1").slideUp("slow");
+             }
+         </script>
+
+JQUERY UI
+<!-- draggable()&droppable -->  makes any DOM element draggable after which you can drag it anywhere within the html page
+     $(selctor).draggable();
+     $(selctor).droppable();
+
+         <h1>jQuery tutorial</h1>
+         <style>
+            #drag{
+                width:150px;
+                height: 60px;
+                background-color: blueviolet
+            }
+         </style>>
+         <script>
+             $(function(){
+                $("#drag").draggable();
+             })         
+         </script>
+         <div id="drag">
+             <p>drag it around</p>
+         </div>
+可以用鼠标将内容移来移去
+
+         <h1>jQuery tutorial</h1>
+         <img id="img1" src="puppies/qiutiandong.jpg">
+         <style>
+            #drop{
+                width:400px;
+                height:400px;
+                float:right;
+                background-color: aquamarine;
+            }
+         </style>
+         <script>
+             $(function() {
+                 $("#img1").draggable();
+                 $("#drop").droppable();
+             })
+         </script>
+         <div id="drop">
+            <p>My home</p>
+         </div>
+
+<!-- datepicker() -->  to enter dates easily and visually
+     $(selctor).datapicker();
+         <h1>jQuery tutorial</h1>
+         <input id="date" type="text" size="10">
+         <script>
+             $("#date").datepicker()
          </script>
