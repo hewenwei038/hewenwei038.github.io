@@ -1,0 +1,167 @@
+JQUERY METHOD
+
+<!-- css() -->
+     $(selector).css(porpertyname);
+     $(selector).css(porpertyname,value);
+  
+         <h1>jQuery tutorial</h1>
+         <p>By edureks</p>
+         <script>
+             let design={
+             color:"bule",
+             background:"green",
+             border:"3px soild black",
+         }
+         </script>
+
+<!-- attr() -->  set or return attribute values of the selected elements
+     $(selector).attr(attribute)
+     $(selector).attr(attribute,vlaue)
+
+         <h1>jQuery tutorial</h1>
+         <p>By edureks</p>
+         <div class="puppies">
+             <img src="puppies/qiutiandong.jpg">
+             <img src="puppies/doggy.jpg">
+        </div>
+
+                 ----console--- 
+                 $("img").attr("border","5px soild black")
+
+                 ---- link to css file ----
+                 <link rel="stylesheet" type="text/css" href="index.css">
+
+<!-- val() -->  set or return values of the selected elements
+     $(selector).val()
+     $(selector).val(value)
+
+<!-- click() -->  event is excuted when the user clicks on the html element
+     $(selector).click(function)
+
+         <h1>jQuery tutorial</h1>
+         <p>By edureks</p>
+         <script>
+             $(document).ready(function(){
+                 $("button").click(function(){
+                     alert("value: " + $("#sometext").val())
+                 })
+             })
+         </script>
+         <input type="text" id="sometext" value="">
+         <button>sumit</button>
+
+<!-- addclass() -->   adds one or more class to the selected element
+     $(selector).addclass(classname)
+
+         <h1>jQuery tutorial</h1>
+         <p>By edureks</p>
+         <div class="puppies">
+             <img src="puppies/qiutiandong.jpg">
+             <img src="puppies/doggy.jpg">
+         </div>
+         <script>
+             $(document).ready(function(){
+                 $("button").click(function(){
+                 $("img").addClass("styleclass");
+                 });
+             });
+         </script>
+         <style>
+                 .styleclass{
+                      border:5px solid green
+                 }
+         </style>
+         <button>try addclass()</button>
+
+<!-- removeclass() -->   removes one or more class to the selected element
+     $(selector).removeclass(classname)
+
+         ----console---
+             $("img").addclass("styleclass");
+             the border show up
+             $("img").removeclass("styleclass");
+             the border remove
+
+<!-- toggleclass() -->   toggles between adding and removing one or more class to the selected element
+     $(selector).toggleclass(classname)
+         ----console---
+             $("img").addclass("styleclass");
+             the border show up
+             $("img").toggleclass("styleclass");
+             the border remove
+
+
+JQUERY EVENT
+<!-- hide() -->
+     $(selector).hide()
+         <script>
+             $(document).ready(function(){
+                 $("img").click(function(){
+                     $(this).hide();
+                 });
+             });
+         </script>
+         every time click the pic and it will disappear
+
+<!-- on() -->     attaches one or more event handlers for the selected element
+     $(selector).on(event, function)  
+
+<!-- keypress() -->   be excuted when a character is entered
+     $(selector).keypress(function)
+
+         <p>Start typing</p>
+         <input id="press" type="text" size="10">
+         <script>
+             $(document).ready(function(){
+                 $("input").on("keypress", function(){
+                     $("p:last").hide();
+                 });
+             });
+         </script>
+         every time you type a letter then the border hide
+
+
+JQUERY EFFECTS
+<!-- hide() -->  be used to hide a selected element
+     $(selector).hide(speed, callback);
+
+<!-- show() -->  be used to show a selected element
+     $(selector).show(speed, callback);
+
+<!-- toggle() -->  be used to toggle between the hide() and show() effect
+     $(selector).stoggle(speed, callback);
+
+         <button class="button" id="hide">Hide</button>
+         <button class="button" id="show">Show</button>
+
+         <div class="puppies">
+            <img src="puppies/qiutiandong.jpg">
+         </div>
+         <script>
+            $(document).ready(function(){
+             $("#hide").click(function(){
+                 $("img").hide();
+                 });
+             $("#show").click(function(){
+                 $("img").show();
+                 });
+            });
+         </script>
+前面给了id=hide或者show ，后面function的时候就可以直接（#hide）
+
+<!-- fadeout() -->  be used to fade out a selected element
+     $(selector).fadeOut(speed, callback);
+         
+         <button>BYEEE</button>
+         <div class="puppies">
+             <img id="one" src="puppies/qiutiandong.jpg">
+             <img id="two" src="puppies/doggy.jpg">
+         </div>
+         <script>
+             $(document).ready(function(){
+                 $("button").click(function(){
+                     $("one").fadeOut("slow");
+                     $("two").fadeOut("fast");
+                 });
+             });
+         </script>
