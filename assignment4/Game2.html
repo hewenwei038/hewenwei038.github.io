@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock-paper-scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<body>
+     <div class="movement">
+        <img id="rock" src="movement/拳头.png">
+        <img id="paper" src="movement/布.png">
+        <img id="sicissor" src="movement/剪刀.png">
+    </div>
+    <script>
+    //获取随机
+        function GetRandomimage(Min,Max)
+            { 
+             var Range = Max - Min; 
+             var Rand = Math.random(); 
+             return(Min + Math.round(Rand * Range)); 
+             } 
+    </script>
+</body>
+</html>

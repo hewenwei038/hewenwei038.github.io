@@ -1,0 +1,29 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+    position: relative;
+    left: 25em;
+    top: -7em;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    left: 13.5em;
+    top: 14em;
+}
+
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    left: 10em;
+}
+.col-md-13 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    left: 40em;
+    top: -11.4em;
+}
