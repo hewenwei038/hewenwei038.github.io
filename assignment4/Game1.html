@@ -10,66 +10,64 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
-    <script>
-      function s(){
-      function GetRandomNum(Min,Max){ 
-        var Range = Max - Min; 
-        var Rand = Math.random(); 
-        return(Min + Math.round(Rand * Range)); 
-      } 
-
-      function checknum(){
-        var num = GetRandomNum(1,10);
-        var count=1; 
-        var nums= document.getElementsByClassName("py-5");
-          if(count<=10){
-            if(nums=num){
-              document.write('<img src="boom.png">');
-            break;}
-            else{
-            if(nums<num){
-              document.getElementById("demo").innerHTML = "Still have"+10-i+"chances", " a little bit small!";
-            }
-            else{
-              document.getElementById("demo").innerHTML = "Still have"+10-i+"chances", " a little bit big!";
-            }
-          }
-          }
-        }
-      }
-
-        if(count>10){
-          document.getElementById("demo").innerHTML = "NOOO CHANCESS!";
-        }
-    
-    </script>
+    <script src="ja.js"> </script>
   </head>
 
 <body>
-    <h1 id="demo">10 CHANCES</h1>
-    <p1 style="font-size: xx-large;position: relative;top: 19em;left: 19.5em;">Player 1</p1>
-    <p2 style="font-size: xx-large;position: relative;top: 19em; left: 31em;">Player 2</p2>
+
+    <p id="demo">5 CHANCES</p>
+    <p id="hi"></p>
+    <p id="h2"></p>
     <div class="ballon">
         <img id="ballon" src="气球.png">
     </div>
 
+    <form id="myForm"> 
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="1st" name=1st_number> Type A number:1-10</label>
+            <input type="text" class="form-control"> 
+        </div>
+        </div>
+    </form>
 
-    <div class="py-5">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <form class="form-inline">
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Type a Integer:0-10">
-                          <div class="input-group-append">
-                          <button class="btn btn-primary" type="button" onclick="s();" >Confirm</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <button type="button" class="btn btn-primary" onclick="checknum();">confirm</button>
+    
 
+<script>
+  var num = Math.floor(Math.random()*11);
+  document.getElementById("hi").innerHTML = "is" + num;
+  var i=5;
+  function checknum(){
+
+  var nums = document.getElementById("myForm").elements[0].value;
+  document.getElementById("h2").innerHTML = "is" + nums;
+
+   docount();
+    if(nums-num==0){
+    document.write('<img src="boom.png">');
+  }
+  else if(nums-num>0){
+      document.getElementById("demo").innerHTML = "You still have" + i +" chances, a little bit big!";
+    }
+  else {
+      document.getElementById("demo").innerHTML = "You still have" + i +" chances, a little bit small!";
+    
+    } 
+  }
+
+
+function docount(){
+  i--;
+  if(i==0){
+    document.getElementById("demo").innerHTML = " NOOOO CHANCES!";
+  }
+
+  
+}
+
+
+
+</script>
 </body>
 </html>
