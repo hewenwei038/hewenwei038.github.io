@@ -16,8 +16,7 @@
 <body>
 
     <p id="demo">5 CHANCES</p>
-    <p id="hi"></p>
-    <p id="h2"></p>
+
     <div class="ballon">
         <img id="ballon" src="气球.png">
     </div>
@@ -25,8 +24,8 @@
     <form id="myForm"> 
       <div class="form-group">
         <div class="col-xs-4">
-            <label for="1st" name=1st_number> Type A number:1-10</label>
-            <input type="text" class="form-control"> 
+            <label for="1st" name=1st_number> </label>
+            <input type="text" class="form-control"  placeholder="Type a Integer:0-10" style= width:20%;> 
         </div>
         </div>
     </form>
@@ -34,40 +33,6 @@
     <button type="button" class="btn btn-primary" onclick="checknum();">confirm</button>
     
 
-<script>
-  var num = Math.floor(Math.random()*11);
-  document.getElementById("hi").innerHTML = "is" + num;
-  var i=5;
-  function checknum(){
 
-  var nums = document.getElementById("myForm").elements[0].value;
-  document.getElementById("h2").innerHTML = "is" + nums;
-
-   docount();
-    if(nums-num==0){
-    document.write('<img src="boom.png">');
-  }
-  else if(nums-num>0){
-      document.getElementById("demo").innerHTML = "You still have" + i +" chances, a little bit big!";
-    }
-  else {
-      document.getElementById("demo").innerHTML = "You still have" + i +" chances, a little bit small!";
-    
-    } 
-  }
-
-
-function docount(){
-  i--;
-  if(i==0){
-    document.getElementById("demo").innerHTML = " NOOOO CHANCES!";
-  }
-
-  
-}
-
-
-
-</script>
 </body>
 </html>
