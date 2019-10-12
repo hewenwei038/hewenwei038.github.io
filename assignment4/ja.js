@@ -3,10 +3,10 @@ var i=5;
 
 function docount(){
   i--;
-  if(i==0){
-    document.getElementById("demo").innerHTML = " NOOOO CHANCES!";
+  if(i<=0){
+    document.write('<img src="too bad.jpg">');
   } 
-  else{
+  else {
     checknum();
   }
 }
