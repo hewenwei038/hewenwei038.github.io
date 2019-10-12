@@ -1,16 +1,38 @@
-img {
+
+.ballon {
     vertical-align: middle;
     border-style: none;
-    position: absolute;
-    z-index: 1;
-    top:35%;
-    left:50%;
+    position: absolute;  
+    top:-2em;
+    left:30%;
     border-radius: 5px;
     -webkit-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
-    
+    animation: changeBiger 60s linear forwards;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    transform: scale(1);
+    z-index: -1;
 }
+     @-webkit-keyframes changeBiger {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(2);
+  }
+     }
+
+.boom{
+  vertical-align: middle;
+  display:none;
+  border-style: none;
+  position: absolute;  
+  top:1em;
+  left:15%;
+}
+
 
     p {
         margin-top: 0;
@@ -20,7 +42,7 @@ img {
         font-weight: bolder;
         font-family: fantasy;
         position: absolute;
-        top:75%;
+        top:80%;
         left:50%;
         border-radius: 5px;
         -webkit-transform:translate(-50%,-50%);
@@ -31,7 +53,7 @@ img {
 
 .form-control {
     position: absolute;
-    top:85%;
+    top:92%;
     left:45%;
     border-radius: 5px;
     -webkit-transform:translate(-50%,-50%);
@@ -45,7 +67,7 @@ img {
     background-color: #12bbad;
     border-color: #12bbad;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-    position: absolute;;
+    position: absolute;
     left: 48em;
-    top: 32em;
+    top: 34.7em;
 }
