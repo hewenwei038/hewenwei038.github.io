@@ -1,5 +1,7 @@
+
 var num = Math.floor(Math.random()*11);
 var i=5;
+
 
 function docount(){
   i--;
@@ -24,6 +26,9 @@ function checknum(){
   } 
 }
 
+var boom=document.getElementById("boom");
+setTimeout(function(){boom.show()
+ }, 1000);
 
 
 
