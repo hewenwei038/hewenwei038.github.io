@@ -6,9 +6,6 @@
     top:-5%;
     left:30%;
     border-radius: 5px;
-    -webkit-transform:translate(-50%,-50%);
-    -moz-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
     animation: changeBiger 60s linear forwards;
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
@@ -45,9 +42,7 @@
         top:80%;
         left:50%;
         border-radius: 5px;
-        -webkit-transform:translate(-50%,-50%);
-        -moz-transform:translate(-50%,-50%);
-        transform:translate(-50%,-50%);
+
 }
 
 
@@ -56,9 +51,6 @@
     top:92%;
     left:45%;
     border-radius: 5px;
-    -webkit-transform:translate(-50%,-50%);
-    -moz-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
 }
 
 
@@ -70,7 +62,5 @@
     position: absolute;
     left: 50.5em;
     top: 92%;
-    -webkit-transform:translate(-50%,-50%);
-    -moz-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
+
 }
