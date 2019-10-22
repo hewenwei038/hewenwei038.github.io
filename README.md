@@ -12,3 +12,5 @@
  Assignment#4-A Game : http://hewenwei038.github.io/assignment4_game
  
  Assignment#5-JSON Data in Jquery Datatables & Airtable Roll Up : http://hewenwei038.github.io/assignment5_json_and_rollup
+
+ Assignment#6-Using jQuery getJSON and Airtable API : http://hewenwei038.github.io/assignment6_getjson_and_api
