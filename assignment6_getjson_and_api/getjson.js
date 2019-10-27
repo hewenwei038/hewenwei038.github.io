@@ -8,7 +8,6 @@ $(document).ready(function(){
                $.each(result.records, function(key,value) {
                    items = [];
                        items.push(value.fields.室内游戏室);
-                       items.push(value.fields.照片);
                        items.push(value.fields.行政区);
                        items.push(value.fields.地址);
                        items.push(value.fields.游戏主题);
@@ -26,8 +25,6 @@ $(document).ready(function(){
                  columns: [
                      { title: "室内游乐室",
                        defaultContent:""},
-                     { title: "照片",
-                         defaultContent:"" },
                      { title: "行政区",
                        defaultContent:"" },
                      { title: "地址",
