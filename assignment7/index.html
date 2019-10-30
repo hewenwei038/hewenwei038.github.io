@@ -10,6 +10,12 @@
         rel="stylesheet" type="text/css">
         <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
         rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css"
+        rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     </head>
     
     <body>
@@ -37,7 +43,6 @@
                 </div>
             </div>
         </div>
-
         <!--chart1-->
         <div class="section">
             <div class="container">
@@ -46,12 +51,10 @@
                         <h3 contenteditable="true" id="heading1">各区室内游戏室数量排行</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12" id="chart1">
-                        <div class="container"></div>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="section" id="chart1"></div>
+            <div class="container" ></div>
         </div>
 
         <!--chart2-->
@@ -62,14 +65,12 @@
                         <h3 id="heading2">室内游戏室面积</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12" id="chart2">
-                        <div class="container"></div>
-                    </div>
-                </div>
             </div>
         </div>
-
+        <div class="section">
+            <div class="container" id="chart2"></div>
+        </div>
+        
         <!--chart3-->
         <div class="section">
             <div class="container">
@@ -78,13 +79,12 @@
                         <h3 id="heading3">室内游戏室可容纳人数</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="container"></div>
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="section">
+            <div class="container" id="chart3"></div>
+        </div>
+        <script src="script.js"></script>
     </body>
 
 </html>
