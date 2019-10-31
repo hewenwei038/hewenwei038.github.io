@@ -35,7 +35,6 @@ $(document).ready(function(){
 // document ready
 
 //map
-
 var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
 
 var map = L.map('map')

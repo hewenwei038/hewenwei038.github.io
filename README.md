@@ -14,3 +14,5 @@
  Assignment#5-JSON Data in Jquery Datatables & Airtable Roll Up : http://hewenwei038.github.io/assignment5_json_and_rollup
 
  Assignment#6-Using jQuery getJSON and Airtable API : http://hewenwei038.github.io/assignment6_getjson_and_api
+
+ Assignment#7-Using jQuery getJSON and Airtable API making chart and map: http://hewenwei038.github.io/assignment7_chart_and_map
