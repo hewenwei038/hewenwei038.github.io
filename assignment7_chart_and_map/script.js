@@ -60,7 +60,6 @@ $.getJSON(airtable_read_endpoint, function(result) {
 }); // end getJSON
 
 function show_districts(){
-
   for (var i in data) {
       var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng )
