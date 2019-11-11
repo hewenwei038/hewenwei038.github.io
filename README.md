@@ -16,3 +16,5 @@
  Assignment#6-Using jQuery getJSON and Airtable API : http://hewenwei038.github.io/assignment6_getjson_and_api
 
  Assignment#7-Using jQuery getJSON and Airtable API making chart and map: http://hewenwei038.github.io/assignment7_chart_and_map
+
+ Assignment#9-Usability study in wire-frames: http://hewenwei038.github.io/assignment9_usability_study_in_wireframes
