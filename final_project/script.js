@@ -1,4 +1,4 @@
-//chart
+//室外chart
 $(document).ready(function(){
     var items = [];
     var i = 0;
@@ -36,7 +36,7 @@ $(document).ready(function(){
 // document ready
 
 
-//chart1
+//室內chart1
 $(document).ready(function(){
     var items = [];
     var i = 0;
@@ -73,3 +73,5 @@ $(document).ready(function(){
 
  }); // end button
 // document ready
+
+
