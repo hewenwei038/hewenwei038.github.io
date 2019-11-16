@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+        <style href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></style>
+        <style href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></style>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">   
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+     <!--导航-->
+        <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>Play Around</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">主頁</a>
+                        </li>
+                        <li>
+                            <a href="#">簡介</a>
+                        </li>
+                        <li>
+                            <a href="#">室外遊樂場</a>
+                        </li>
+                        <li>
+                            <a href="#">室內遊戲室</a>
+                        </li>
+                        <li>
+                            <a href="#">主題特色</a>
+                        </li>
+                        <li>
+                            <a href="#">星級推薦</a>
+                        </li>
+                        <li>
+                            <a href="#">行程設計</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-expanded="false"><i class="fa fa-caret-down"></i>常用工具<br></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">港鐵線路圖</a>
+                                </li>
+                                <li>
+                                    <a href="#">天氣預報</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--封面-->
+        <div class="cover">
+            <div class="cover-image" style="background-image : url('封面.jpg')"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-center text-muted">歡迎來到 HK Play Around</h1>
+                        <p>探索&nbsp;● 親子&nbsp;●玩樂</p>
+                        <br>
+                        <br>
+                        <a class="btn btn-lg btn-primary">點擊查看</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--簡介-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>釋放小孩的天性</h2>
+                        <p>遊戲是兒童健康和幸福的根本。聯合國兒童基金會指出香港有接近70%的兒童每天玩耍時間不足1小時。事實上，好玩的遊戲並不難找，更不一定要花錢。有時候，有趣的兒童遊樂設施其實就在你的身邊！
+                            <br>HK Play Around 為你設計和打造屬於你和小孩的快樂記憶！
+                            <br>
+                        </p>
+                        <ul class="media-list">
+                            <li class="media">
+                                <a class="pull-left" href="#"><i class="fa fa-3x fa-child fa-fw text-danger"></i></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-danger">探索全港室內外兒童遊樂設施</h4>
+                                    <p>我們為你搜尋了全港公共室內外兒童遊樂設施，讓你便捷高效與小孩開展遊樂行程。</p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a class="pull-left" href="#"><i class="fa fa-3x fa-bar-chart fa-fw text-warning"></i></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-danger">星級推薦</h4>
+                                    <p>我們根據兒童遊樂設施開放時間、面積、可容納人數、具體設施數量進行評分，為你推薦最佳遊樂設施。</p>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a class="pull-left" href="#"><i class="fa fa-3x fa-fw fa-map-marker text-success"></i></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-danger">設計行程</h4>
+                                    <p>我們為你整理了兒童遊樂設施的地理分佈，讓你快速找到想去的遊樂設施。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/2E0Bq2jRcII"
+                            allowfullscreen="" width="640" height="360"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--室外遊樂場-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">室外遊樂場</h1>
+                        <h4 class="text-center text-muted" contenteditable="true">在戶外尋找快樂的天地</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\香港島p.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\九龍p.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\新界p.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--室外遊樂場插入airtable-->
+        <div class="section">
+            <div class="container"></div>
+        </div>
+
+        <!--室外遊樂場插入柱狀圖-->
+        <div class="section">
+            <div class="container"></div>
+            <div id="chart"></div>
+        </div>
+
+
+        <!--室內遊戲室-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">室內遊戲室</h1>
+                        <h4 class="text-center text-muted">在室內獲取快樂的能量</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\香港島p2.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\九龍2p.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\新界p2.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--室內遊戲室插入airtable-->
+        <div class="section">
+            <div class="container"></div>
+        </div>
+
+        <!--室內遊戲室插入柱狀圖-->
+        <div class="section">
+            <div class="container"></div>
+            <div id="chart1"></div>
+        </div>
+
+        
+        <!--主題特色-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">主題特色</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\航海.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\秋千.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\大面积.jpg" class="img-responsive"></a>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\恐龙.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\搖搖板.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#"><img src="pic\人数少.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--星級推薦-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-center">星級推薦</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-danger btn-lg">室外遊樂場</a>
+                            <a href="#" class="btn btn-lg btn-warning">室內遊戲室</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--星級推薦表格-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center">Heading</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--行程設計-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">行程設計</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-danger btn-lg">香港島</a>
+                            <a href="#" class="btn btn-lg btn-warning">九龍</a>
+                            <a href="#" class="btn btn-lg btn-success">新界</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-md-12 text-center">
+                        <div class="btn-group btn-group-lg">
+                            <a href="#" class="btn btn-primary">航海</a>
+                            <a href="#" class="btn btn-info">恐龍</a>
+                            <a href="#" class="btn btn-primary">蕩鞦韆</a>
+                            <a class="btn btn-info">&nbsp;搖搖板</a>
+                            <a class="btn btn-primary">大面積</a>
+                            <a class="btn btn-info">&nbsp;人數少</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--行程設計地圖-->
+        <div class="section">
+            <div class="container"></div>
+        </div>
+
+        <!--頁腳-->
+        <footer class="section section-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Footer header</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                            <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                            <br>Ut enim ad minim veniam, quis nostrud</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-info text-right">
+                            <br>
+                            <br>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs text-right">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
