@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src='getjson.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,3 +27,8 @@
      <script src='getjson.js'></script>
      <script src='scriptlib2.js'></script>
 </html>
+
+IF({評分}>=1,"☹No Go",IF({評分}>=2,"❈Meh",IF({評分}>=3,"✿OK",IF({評分}>=4,"☺Pretty Awsome",IF({評分}>=5,"❤Love, Sweet love")))))
+IF({評分}>=5,"❤Love, Sweet love",IF({評分}>=4,"☺Pretty Awsome",IF({評分}>=3,"✿OK",IF({評分}>=2,"❈Meh",IF({評分}>=1,"☹No Go")))))
+
+IF({評分}>=100,"❤Love, Sweet love",IF({評分}>=70,"☺Pretty Awsome",IF({評分}>=60,"✿OK",IF({評分}>=50,"❈Meh",IF({評分}>=30,"☹No Recommend")))))
