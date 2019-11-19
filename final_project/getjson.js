@@ -1,5 +1,16 @@
+$(document).ready(function(){
+  $("#star1").hide(function() {
+  });
+
+  $("#star2").hide(function() {
+  });
+});
+
 //星級推薦評分室外
+$(document).ready(function(){
 $("#rec1").click(function(){
+  $("#star1").toggle();
+  $("#star2").hide();
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appzaLFMIfIdCLiyb/%E5%AE%A4%E5%A4%96%E8%A9%95%E5%88%86%E8%A1%A8?api_key=keyMKBpzuSeqRV0SV";
@@ -41,11 +52,13 @@ $("#rec1").click(function(){
          } );
     }); // end .getJSON
  }); // end button
-
+}); 
 
  //星級推薦評分室內
-
+ $(document).ready(function(){
  $("#rec2").click(function(){
+  $("#star1").hide();
+  $("#star2").toggle();
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appzaLFMIfIdCLiyb/%E5%AE%A4%E5%85%A7%E8%A9%95%E5%88%86%E8%A1%A8?api_key=keyMKBpzuSeqRV0SV";
@@ -65,7 +78,7 @@ $("#rec1").click(function(){
             }); // end .each
             console.log(dataSet);
 
-         $('#table1').DataTable( {
+         $('#table2').DataTable( {
              data: dataSet,
              retrieve: true,
              columns: [
@@ -87,3 +100,4 @@ $("#rec1").click(function(){
          } );
     }); // end .getJSON
  }); // end button
+});

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
+        <title>HK Play Around</title>
         <!--pingendo-->
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
         rel="stylesheet" type="text/css">
-        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
-        </script>
+
 
         <!--viewport-->
         <meta charset="utf-8">
@@ -19,21 +18,27 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
         <!--boostrap-->
-        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
         rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
         <style href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></style>
-        <style href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
         <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+       
 
         <!--leaflet-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+        </script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
 
         <!--c3d3-->
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
@@ -51,56 +56,56 @@
     
     <body>
      <!--导航-->
-        <div class="navbar navbar-default navbar-fixed-top navbar-inverse" id="head">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+        <nav class="navbar navbar-default navbar-fixed-top" >
+                <div class="container" id="head">
+                   <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#head"><span>Play Around</span></a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active">
-                            <a href="#main">主頁</a>
-                        </li>
-                        <li>
-                            <a href="#introduction">簡介</a>
-                        </li>
-                        <li>
-                            <a href="#outdoor">室外遊樂場</a>
-                        </li>
-                        <li>
-                            <a href="#indoor">室內遊戲室</a>
-                        </li>
-                        <li>
-                            <a href="#theme">主題特色</a>
-                        </li>
-                        <li>
-                            <a href="#recommendation">星級推薦</a>
-                        </li>
-                        <li>
-                            <a href="#journey">行程設計</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-expanded="false"><i class="fa fa-caret-down"></i>常用工具<br></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="#">港鐵線路圖</a>
+                      <a class="navbar-brand" href="#main">HK Play Around</a>
+                   </div>
+                   <div id="navbar" class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                    <a href="#main">主頁</a>
                                 </li>
                                 <li>
-                                    <a href="#">天氣預報</a>
+                                    <a href="#introduction">簡介</a>
                                 </li>
-                            </ul>
-                        </li>
-                    </ul>
+                                <li>
+                                    <a href="#outdoor">室外遊樂場</a>
+                                </li>
+                                <li>
+                                    <a href="#indoor">室內遊戲室</a>
+                                </li>
+                                <li>
+                                    <a href="#theme">主題特色</a>
+                                </li>
+                                <li>
+                                    <a href="#recommendation">星級推薦</a>
+                                </li>
+                                <li>
+                                    <a href="#journey">行程設計</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-expanded="false"><i class="fa fa-caret-down"></i>常用工具<br></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="#" class="text-center">港鐵線路圖</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-center">天氣預報</a>
+                                        </li>
+                      </ul>
+                   </div>
+                   <!--/.nav-collapse -->
                 </div>
-            </div>
-        </div>
+             </nav>
+
 
         <!--封面-->
         <div class="cover" id="main">
@@ -194,7 +199,8 @@
 
         <div class="section" id="jl">
             <div class="container">
-               <iframe class="airtable-embed" src="https://airtable.com/embed/shrkaYt3yCMXyGeCA?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>            </div>
+               <iframe class="airtable-embed" src="https://airtable.com/embed/shrkaYt3yCMXyGeCA?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>           
+            </div>
         </div>
 
         <div class="section" id="xj">
@@ -249,15 +255,15 @@
     
         <div class="section" id="xj1">
                 <div class="container">
-                        <iframe class="airtable-embed" src="https://airtable.com/embed/shriEfjTUInNWN3iv?backgroundColor=red&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shriEfjTUInNWN3iv?backgroundColor=red&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
                 </div>
         </div>
 
         <!--室內遊戲室插入柱狀圖-->
         <div class="section">
             <div class="container">
-            <div id="chart1"></div>
-        </div>
+                 <div id="chart1"></div>
+            </div>
         </div>
 
         
@@ -274,7 +280,7 @@
                         <a href="#myModal"><img src="pic\航海.jpg" class="img-responsive" data-toggle="modal" data-target="#myModal"></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#myModal1"><img src="pic\秋千.jpg" class="img-responsive" data-toggle="modal" data-target="#myModal1"></a>
+                        <a href="#myModal1"></a><img src="pic\秋千.jpg" class="img-responsive" data-toggle="modal" data-target="#myModal1"></a>
                     </div>
                     <div class="col-md-4">
                         <a href="#myModal2"><img src="pic\大面积.jpg" class="img-responsive" data-toggle="modal" data-target="#myModal2"></a>
@@ -298,21 +304,21 @@
         <div class="container" id="model"> 
         <!-- 航海 -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
-        </div>
+              </div>
         <!-- 鞦韆-->
         <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -413,13 +419,19 @@
                     <div class="col-md-12 text-center">
                         <div class="btn-group">
                             <a href="#table1" class="btn btn-danger btn-lg" id="rec1">室外遊樂場</a>
-                            <a href="#table1" class="btn btn-lg btn-warning" id="rec2">室內遊戲室</a>
+                            <a href="#table2" class="btn btn-lg btn-warning" id="rec2">室內遊戲室</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="setion" id="judge">
+            <div class="container">
+                <h4 class="text-center">❤Love, Sweet love-極度推薦  ☺Pretty Awsome-非常推薦  ✿OK-推薦 ❈Meh-一般  ☹No Recommend-不推薦</h4>
+                <h5 class="text-center">室外遊樂場推薦度標準=亮點數*20%+設施種類數*40%+可到達交通種類數*10%+網絡評價*30%</h5>
+                <h5 class="text-center">室內遊戲室推薦度標準=面積*40%+可容納人數*30%+開放時長*30%</h5>
+            </div>
+        </div>
 
         <!--室外星級推薦表格-->
         <div class="container" >
@@ -428,7 +440,11 @@
                   </div>
         </div>
        
-
+        <div class="container" >
+        <div class="table-responsive" id="star2">
+                <table id="table2" width="100%"  class="table table-bordered"></table>
+            </div>
+        </div>
 
         <!--行程設計-->
         <div class="section" id="journey">
@@ -441,9 +457,9 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="btn-group">
-                            <a href="#" class="btn btn-danger btn-lg">香港島</a>
-                            <a href="#" class="btn btn-lg btn-warning">九龍</a>
-                            <a href="#" class="btn btn-lg btn-success">新界</a>
+                            <a href="#" class="btn btn-danger btn-lg" id="showlocation1" onclick="show_districts1();">香港島</a>
+                            <a href="#" class="btn btn-lg btn-warning" id="showlocation2" onclick="show_districts2();">九龍</a>
+                            <a href="#" class="btn btn-lg btn-success" id="showlocation3" onclick="show_districts3();">新界</a>
                         </div>
                     </div>
                 </div>
@@ -451,12 +467,9 @@
                     <br>
                     <div class="col-md-12 text-center">
                         <div class="btn-group btn-group-lg">
-                            <a href="#" class="btn btn-primary">航海</a>
-                            <a href="#" class="btn btn-info">恐龍</a>
-                            <a href="#" class="btn btn-primary">蕩鞦韆</a>
-                            <a class="btn btn-info">&nbsp;搖搖板</a>
-                            <a class="btn btn-primary">大面積</a>
-                            <a class="btn btn-info">&nbsp;人數少</a>
+                            <a href="#" class="btn btn-primary" id="showlocation4" onclick="show_districts4();">❤Love, Sweet love</a>
+                            <a href="#" class="btn btn-info" id="showlocation5" onclick="show_districts5();">☺Pretty Awsome</a>
+                            <a href="#" class="btn btn-primary" id="showlocation6" onclick="show_districts6();">✿OK</a>
                         </div>
                     </div>
                 </div>
@@ -464,9 +477,8 @@
         </div>
 
         <!--行程設計地圖-->
-        <div class="section">
-            <div class="container"></div>
-            <div id="map" style="width: 600px; height: 400px"></div>
+        <div class="section" style="padding: 15px;">
+            <div id="mapid" style="width: 1000px; height: 400px;" class="container"></div>
         </div>
 
         <!--頁腳-->
@@ -507,6 +519,7 @@
       
         <script src='getjson.js'></script>
         <script src="script.js"></script>
+        <script src="map.js"></script>
     </body>
 
 </html>

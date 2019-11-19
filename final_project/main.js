@@ -1,3 +1,19 @@
+window.onscroll = function() {scrollFunction()};
+
+
+$(document).ready(function() {
+    // Transition effect for navbar 
+    $(window).scroll(function() {
+      // checks if window is scrolled more than 500px, adds/removes solid class
+      if($(this).scrollTop() > 500) { 
+          $('.navbar').addClass('solid');
+          $('#head').css("padding", "0.2em");
+      } else {
+          $('.navbar').removeClass('solid');
+      }
+    });
+});
+
 //室外插入airtable
 $(document).ready(function(){
     $("#xgd").hide(function() {
@@ -12,22 +28,19 @@ $(document).ready(function(){
     $("#香港島").click(function() {
         $("#xj").hide();
         $("#jl").hide();
-        $("#chart").hide();
-        $("#xgd").show(500);
+        $("#xgd").toggle(500);
     })
 
     $("#九龍").click(function() {
         $("#xj").hide();
         $("#xgd").hide();
-        $("#chart").hide();
-        $("#jl").show(500);
+        $("#jl").toggle(500);
     })
 
     $("#新界").click(function() {
         $("#xgd").hide();
         $("#jl").hide();
-        $("#chart").hide();
-        $("#xj").show(500);
+        $("#xj").toggle(500);
     })
 });
 
@@ -45,21 +58,18 @@ $(document).ready(function(){
     $("#香港島1").click(function() {
         $("#xj1").hide();
         $("#jl1").hide();
-        $("#chart1").hide();
-        $("#xgd1").show(500);
+        $("#xgd1").toggle(500);
     })
 
     $("#九龍1").click(function() {
         $("#xj1").hide();
         $("#xgd1").hide();
-        $("#chart1").hide();
-        $("#jl1").show(500);
+        $("#jl1").toggle(500);
     })
 
     $("#新界1").click(function() {
         $("#xgd1").hide();
         $("#jl1").hide();
-        $("#chart1").hide();
-        $("#xj1").show(500);
+        $("#xj1").toggle(500);
     })
 });
