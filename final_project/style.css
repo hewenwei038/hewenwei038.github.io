@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
   }
   
+#mapid {
+    height: 100%;
+        }
+
   .navbar {
     height: 50px;
     background-color: transparent;
