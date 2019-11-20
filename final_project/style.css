@@ -185,3 +185,8 @@ background-color: #FFF7F2;
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+  .section-primary {
+    background-color: #eb7d34!important;
+    color: #ffffff;
+}
