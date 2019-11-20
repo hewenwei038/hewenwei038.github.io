@@ -14,6 +14,15 @@ $(document).ready(function() {
     });
 });
 
+    $(document).ready(function() {
+    $("#checkbtn").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#introduction").offset().top
+        }, 500);
+    });
+    });
+
+
 //室外插入airtable
 $(document).ready(function(){
     $("#xgd").hide(function() {

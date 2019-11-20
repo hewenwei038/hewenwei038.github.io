@@ -47,6 +47,10 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
         <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">   
 
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Freckle+Face&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
         <!--external-->
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
@@ -55,6 +59,9 @@
     </head>
     
     <body>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
      <!--导航-->
         <nav class="navbar navbar-default navbar-fixed-top" >
                 <div class="container" id="head">
@@ -111,7 +118,7 @@
         <div class="image" id="main">
             <h1 class="heading">歡迎來到 HK Play Around</h1>
             <p>探索&nbsp;● 親子&nbsp;●玩樂</p>
-            <p><button class="btn btn-large">點擊查看</button></p>
+            <p><button class="btn btn-large" id="checkbtn">點擊查看</button></p>
          </div>
 
         <!--簡介-->
@@ -121,9 +128,9 @@
                     <div class="col-md-6">
                         <h2>釋放小孩的天性</h2>
                         <p>遊戲是兒童健康和幸福的根本。聯合國兒童基金會指出香港有接近70%的兒童每天玩耍時間不足1小時。事實上，好玩的遊戲並不難找，更不一定要花錢。有時候，有趣的兒童遊樂設施其實就在你的身邊！
-                            <br>HK Play Around 為你設計和打造屬於你和小孩的快樂記憶！
-                            <br>
+                            HK Play Around 為你設計和打造屬於你和小孩的快樂記憶！
                         </p>
+                        <br>
                         <ul class="media-list">
                             <li class="media">
                                 <a class="pull-left" href="#indoor"><i class="fa fa-3x fa-child fa-fw text-danger"></i></a>
@@ -507,7 +514,31 @@
                 </div>
             </div>
         </footer>
-      
+
+        <script>
+
+  
+
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";}
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+        </script>
+
         <script src='getjson.js'></script>
         <script src="script.js"></script>
         <script src="map.js"></script>
