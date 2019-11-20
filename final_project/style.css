@@ -11,7 +11,7 @@ background-color: #FFF7F2;
     background-color: #490D40;
     background:url('封面.jpg') no-repeat center center;
     background-size: cover;
-    height: 600px;
+    height: 625px;
     margin-top: -20px;
   }
   .image .heading {
@@ -54,7 +54,7 @@ background-color: #FFF7F2;
   }
   
   .navbar-default .navbar-brand {
-    color: #eef5f7;
+    color: #EB7D34;
   }
   .navbar-default .navbar-brand:hover,
   .navbar-default .navbar-brand:focus {
