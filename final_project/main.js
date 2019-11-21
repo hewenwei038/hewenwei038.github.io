@@ -22,6 +22,23 @@ $(document).ready(function() {
     });
     });
 
+   // $(document).ready(function() {
+   // $('.navbar-toggle.collapsed').on('click',function (e) {
+     //   e.preventDefault();
+
+     //   var target = this.hash;
+      //  var $target = $(target);
+
+       // $('html, body').stop().animate({
+     //       'scrollTop': $target.offset()
+     //   }, 900, 'swing', function () {
+     //       window.location.hash = target;
+     //   });
+  //  });
+//});
+
+
+
 
 //室外插入airtable
 $(document).ready(function(){
