@@ -63,7 +63,7 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
      <!--导航-->
-        <nav class="navbar navbar-default navbar-fixed-top" >
+        <nav class="navbar navbar-default navbar-fixed-top" style="z-index:999">
                 <div class="container" id="head">
                    <div class="navbar-header">
                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/2E0Bq2jRcII"
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/naa06McIzj8"
                             allowfullscreen="" width="640" height="360"></iframe>
                         </div>
                     </div>
@@ -455,9 +455,9 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="btn-group">
-                            <a href="#" class="btn btn-danger btn-lg" id="showlocation1" onclick="show_districts1();">香港島</a>
-                            <a href="#" class="btn btn-lg btn-warning" id="showlocation2" onclick="show_districts2();">九龍</a>
-                            <a href="#" class="btn btn-lg btn-danger" id="showlocation3" onclick="show_districts3();">新界</a>
+                            <a  class="btn btn-danger btn-lg" id="showlocation1" onclick="show_districts1();">香港島</a>
+                            <a  class="btn btn-lg btn-warning" id="showlocation2" onclick="show_districts2();">九龍</a>
+                            <a  class="btn btn-lg btn-danger" id="showlocation3" onclick="show_districts3();">新界</a>
                         </div>
                     </div>
                 </div>
@@ -465,9 +465,9 @@
                     <br>
                     <div class="col-md-12 text-center">
                         <div class="btn-group btn-group-lg">
-                            <a href="#" class="btn btn-sm" id="showlocation4" onclick="show_districts4();">❤Love, Sweet love</a>
-                            <a href="#" class="btn btn-sm" id="showlocation5" onclick="show_districts5();">☺Pretty Awsome</a>
-                            <a href="#" class="btn btn-sm" id="showlocation6" onclick="show_districts6();">✿OK</a>
+                            <a  class="btn btn-sm" id="showlocation4" onclick="show_districts4();">❤Love, Sweet love</a>
+                            <a  class="btn btn-sm" id="showlocation5" onclick="show_districts5();">☺Pretty Awsome</a>
+                            <a  class="btn btn-sm" id="showlocation6" onclick="show_districts6();">✿OK</a>
                         </div>
                     </div>
                 </div>
@@ -476,7 +476,7 @@
 
         <!--行程設計地圖-->
         <div class="jumbotron" id="Map" style="background-color: transparent;">
-                <div id="mapid" style="width: 1000px; height: 400px;" class="container"></div>
+                <div id="mapid" style="width: 1000px; height: 400px; border: 1px solid #AAA; margin-left: auto; margin-right: auto;"></div>
         </div>
 
         <!--頁腳-->
