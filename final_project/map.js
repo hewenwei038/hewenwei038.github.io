@@ -203,7 +203,3 @@ function show_districts6(){
   }
 }
 
-function clear_markers () {
-  // map.removeLayer(marker);
-  layerGroup.clearLayers();
-}
