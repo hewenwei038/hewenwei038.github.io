@@ -22,20 +22,6 @@ $(document).ready(function() {
     });
     });
 
-   // $(document).ready(function() {
-   // $('.navbar-toggle.collapsed').on('click',function (e) {
-     //   e.preventDefault();
-
-     //   var target = this.hash;
-      //  var $target = $(target);
-
-       // $('html, body').stop().animate({
-     //       'scrollTop': $target.offset()
-     //   }, 900, 'swing', function () {
-     //       window.location.hash = target;
-     //   });
-  //  });
-//});
 
 $(document).ready(function(){
 $(".navbar-nav li a").click(function (event) {
@@ -52,60 +38,129 @@ $(".navbar-nav li a").click(function (event) {
 
 //室外插入airtable
 $(document).ready(function(){
-    $("#xgd").hide(function() {
+    $("#age2_5").hide(function() {
     });
 
-    $("#jl").hide(function() {
+    $("#age5_12").hide(function() {
     });
 
-    $("#xj").hide(function() {
+    $("#共融樂園").hide(function() {
     });
 
-    $("#香港島").click(function() {
-        $("#xj").hide();
-        $("#jl").hide();
-        $("#xgd").toggle(500);
+    $("#特色主題").hide(function() {
+    });
+
+    $("#outdoor1").click(function() {
+        $("#age5_12").hide();
+        $("#共融樂園").hide();
+        $("#特色主題").hide();
+        $("#age2_5").toggle(500);
     })
 
-    $("#九龍").click(function() {
-        $("#xj").hide();
-        $("#xgd").hide();
-        $("#jl").toggle(500);
+    $("#outdoor2").click(function() {
+        $("#age2_5").hide();
+        $("#共融樂園").hide();
+        $("#特色主題").hide();
+        $("#age5_12").toggle(500);
     })
 
-    $("#新界").click(function() {
-        $("#xgd").hide();
-        $("#jl").hide();
-        $("#xj").toggle(500);
+    $("#outdoor3").click(function() {
+        $("#age2_5").hide();
+        $("#age5_12").hide();
+        $("#特色主題").hide();
+        $("#共融樂園").toggle(500);
+    })
+
+    $("#outdoor4").click(function() {
+        $("#age2_5").hide();
+        $("#age5_12").hide();
+        $("#共融樂園").hide();
+        $("#特色主題").toggle(500);
     })
 });
 
 //室內插入airtable
 $(document).ready(function(){
-    $("#xgd1").hide(function() {
+    $("#bsize").hide(function() {
     });
 
-    $("#jl1").hide(function() {
+    $("#lpopulation").hide(function() {
     });
 
-    $("#xj1").hide(function() {
+    $("#longtime").hide(function() {
     });
 
-    $("#香港島1").click(function() {
-        $("#xj1").hide();
-        $("#jl1").hide();
-        $("#xgd1").toggle(500);
+    $("#特色主題2").hide(function() {
+    });
+
+    $("#indoor1").click(function() {
+        $("#特色主題2").hide();
+        $("#lpopulation").hide();
+        $("#longtime").hide();
+        $("#bsize").toggle(500);
     })
 
-    $("#九龍1").click(function() {
-        $("#xj1").hide();
-        $("#xgd1").hide();
-        $("#jl1").toggle(500);
+    $("#indoor2").click(function() {
+        $("#bsize").hide();
+        $("#longtime").hide();
+        $("#特色主題2").hide();
+        $("#lpopulation").toggle(500);
     })
 
-    $("#新界1").click(function() {
-        $("#xgd1").hide();
-        $("#jl1").hide();
-        $("#xj1").toggle(500);
+    $("#indoor3").click(function() {
+        $("#bsize").hide();
+        $("#lpopulation").hide();
+        $("#特色主題2").hide();
+        $("#longtime").toggle(500);
+    })
+
+    $("#indoor4").click(function() {
+        $("#bsize").hide();
+        $("#lpopulation").hide();
+        $("#longtime").hide();
+        $("#特色主題2").toggle(500);
+    })
+});
+
+//特色亮点插入airtable
+$(document).ready(function(){
+    $("#千秋").hide(function() {
+    });
+
+    $("#蹺蹺板").hide(function() {
+    });
+
+    $("#完善設施").hide(function() {
+    });
+
+    $("#寵物同樂").hide(function() {
+    });
+
+    $("#theme1").click(function() {
+        $("#蹺蹺板").hide();
+        $("#完善設施").hide();
+        $("#寵物同樂").hide();
+        $("#千秋").toggle(500);
+    })
+
+    $("#theme2").click(function() {
+        $("#千秋").hide();
+        $("#完善設施").hide();
+        $("#寵物同樂").hide();
+        $("#蹺蹺板").toggle(500);
+    })
+
+    $("#theme3").click(function() {
+        $("#千秋").hide();
+        $("#蹺蹺板").hide();
+        $("#寵物同樂").hide();
+        $("#完善設施").toggle(500);
+    })
+
+    $("#theme4").click(function() {
+        $("#千秋").hide();
+        $("#蹺蹺板").hide();
+        $("#完善設施").hide();
+        $("#寵物同樂").toggle(500);
     })
 });

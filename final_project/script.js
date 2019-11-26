@@ -2,12 +2,12 @@
 $(document).ready(function(){
     var items = [];
     var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appzaLFMIfIdCLiyb/%E5%AE%A4%E5%A4%96%E6%B8%AF%E4%B9%9D%E6%96%B0%E7%95%8C?api_key=keyMKBpzuSeqRV0SV";
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appvI1Mn4FYilUN9C/%E5%AE%A4%E5%A4%96%E8%A9%95%E5%88%86%E8%A1%A8%E5%8C%AF%E7%B8%BD?api_key=keyMKBpzuSeqRV0SV";
     var dataSet = [];
     $.getJSON(airtable_read_endpoint, function(result) {
            $.each(result.records, function(key,value) {
                items = [];
-                   items.push(value.fields.室外港九新界);
+                   items.push(value.fields.推薦度);
                    items.push(value.fields.數量);
                    dataSet.push(items);
                    console.log(items);
@@ -21,7 +21,7 @@ $(document).ready(function(){
                   type : 'bar'
               },
               axis: {
-                x: {label: '室外遊樂場'},
+                x: {label: '推薦度'},
                 y: {label: '數量'}
               },
               bar: {
@@ -40,12 +40,12 @@ $(document).ready(function(){
 $(document).ready(function(){
     var items = [];
     var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appzaLFMIfIdCLiyb/%E5%AE%A4%E5%85%A7%E6%B8%AF%E4%B9%9D%E6%96%B0%E7%95%8C?api_key=keyMKBpzuSeqRV0SV";
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appvI1Mn4FYilUN9C/%E5%AE%A4%E5%85%A7%E8%A9%95%E5%88%86%E8%A1%A8%E5%8C%AF%E7%B8%BD?api_key=keyMKBpzuSeqRV0SV";
     var dataSet = [];
     $.getJSON(airtable_read_endpoint, function(result) {
            $.each(result.records, function(key,value) {
                items = [];
-                   items.push(value.fields.港九新界);
+                   items.push(value.fields.推薦度);
                    items.push(value.fields.數量);
                    dataSet.push(items);
                    console.log(items);
@@ -59,7 +59,7 @@ $(document).ready(function(){
                   type : 'bar'
               },
               axis: {
-                x: {label: '室內遊戲室'},
+                x: {label: '推薦度'},
                 y: {label: '數量'}
               },
               bar: {

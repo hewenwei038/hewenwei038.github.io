@@ -66,7 +66,7 @@ function show_districts1(){
   for (var i in data) {
       var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng, {icon: xgdi})
-          .bindPopup(data[i].inout  + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name)
+          .bindPopup('<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name)
           .addTo(layerGroup);
   }
 }
@@ -79,7 +79,7 @@ var datajl = [];
 $.getJSON(airtable_read_endpoint, function(result) {
        $.each(result.records, function(key,value) {
         map2_jl = {};
-        map2_jl["name"] = value.fields.九龍;
+        map2_jl["name"] = value.fields.Name;
         map2_jl["image_url"] = value.fields.img_url;
         map2_jl["latitud"] = value.fields.lat;
         map2_jl["longitud"] = value.fields.ling;
@@ -93,7 +93,7 @@ function show_districts2(){
   for (var i in datajl) {
       var latlng = L.latLng({ lat: datajl[i].latitud, lng: datajl[i].longitud });
       L.marker( latlng, {icon: jli})
-          .bindPopup(datajl[i].inout  + '<img src="' + datajl[i].image_url+'" width = "80px"><br>'+datajl[i].name)
+          .bindPopup('<img src="' + datajl[i].image_url+'" width = "80px"><br>'+datajl[i].name)
           .addTo(layerGroup);
   }
 }
@@ -120,7 +120,7 @@ function show_districts3(){
   for (var i in dataxj) {
       var latlng = L.latLng({ lat: dataxj[i].latitud, lng: dataxj[i].longitud });
       L.marker( latlng, {icon: xji})
-          .bindPopup(dataxj[i].inout  + '<img src="' + dataxj[i].image_url+'" width = "80px"><br>'+dataxj[i].name)
+          .bindPopup('<img src="' + dataxj[i].image_url+'" width = "80px"><br>'+dataxj[i].name)
           .addTo(layerGroup);
   }
 }

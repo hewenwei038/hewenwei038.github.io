@@ -3,7 +3,7 @@ html {
   }
 
 body {
-background-color: #FFF7F2;
+background-color: #F7F0E4;
 }
 
 /*封面*/
@@ -162,7 +162,6 @@ background-color: #FFF7F2;
 /*地图*/
   #mapid {
     height: 100%;
-    margin-top: -2.5em;
         }
 
 
