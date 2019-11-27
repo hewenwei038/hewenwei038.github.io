@@ -82,7 +82,7 @@
     
     <body>
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top">∧</button>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
      <!--导航-->
         <nav class="navbar navbar-default navbar-fixed-top" style="z-index:999" >
@@ -108,7 +108,7 @@
                                     <a href="#p1">樂園一覽</a>
                                 </li>
                                 <li>
-                                    <a href="#p2">個性化選擇</a>
+                                    <a href="#p2">個性化推薦</a>
                                 </li>
                                 <li>
                                     <a href="#recommendation">星級推薦</a>
@@ -145,7 +145,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 style="color:#003049;">釋放小孩的天性</h2>
+                        <h2>釋放小孩的天性</h2>
                         <p>遊戲是兒童健康和幸福的根本。聯合國兒童基金會指出香港有接近70%的兒童每天玩耍時間不足1小時。事實上，好玩的遊戲並不難找，更不一定要花錢。有時候，有趣的兒童遊樂設施其實就在你的身邊！
                             HK Play Around 為你設計和打造屬於你和小孩的快樂記憶！
                         </p>
@@ -184,19 +184,14 @@
             </div>
         </div>
 
-        <div class="section" id="p1"  style="background-image:url('pic/p.jpg');">
+        <div class="section" id="p1">
         <h1 class="text-center" id="h1">— 樂園一覽 —</h1>             
         <section id="counter" class="front-page-section" style="background-color:transparent;">
             <div class="counter-overlay"></div>
             <div class="container">
             <div class="row inline-columns">
-            <div id="illdy_counter-4" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">83</p><p class="counter-description" >樂園總數</p></div><div id="illdy_counter-3" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">45</p><a href="#p1_1"  class="counter-description" id="countd1">點擊查看全港室外遊樂場</a></div><div id="illdy_counter-2" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">38</p><a href="#p1_2" class="counter-description" id="countd2">點擊查看全港室內遊戲室</a></div> </div>
-            <div class="container" id="p1_1">
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrTyeVqWnGSl4ROo?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>            </div>
-            <div class="container" id="p1_2">
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrm38jNW611qMHlW?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <div id="illdy_counter-4" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">260</p><p class="counter-description">樂園總數</p></div><div id="illdy_counter-3" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">120</p><p class="counter-description">點擊查看全港室外遊樂場</p></div><div id="illdy_counter-2" class="col-sm-4 col-xs-12 widget_illdy_counter"><p class="counter-number">260</p><p class="counter-description">點擊查看全港室內遊戲室</p></div> </div>
             </div>
-        </div>
             </section>
         </div>
 
@@ -204,7 +199,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center" id="h1">— 個性化選擇 —</h1>
+                    <h1 class="text-center" id="h1">— 個性化推薦 —</h1>
                     <h4 class="text-center text-muted" contenteditable="true">點擊挑選最適合您的玩耍樂園</h4>
                 </div>
                 <div class="container text-center" id="btn1">
@@ -507,11 +502,11 @@
 
 
         <!--星級推薦-->
-        <div class="section" id="recommendation" >
+        <div class="section" id="recommendation">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="text-center" id="h1">— 星級推薦 —</h1>
+                        <h1 class="text-center" id="h1">—— 星級推薦 ——</h1>
                         <h4 class="text-center text-muted">❤Love, Sweet love-極度推薦  ☺Pretty Awsome-非常推薦  ✿OK-推薦 ❈Meh-一般  ☹Not Recommend-不推薦</h4>
                         <h5 class="text-center text-muted">室外遊樂場推薦度標準=亮點數*20%+設施種類數*40%+可到達交通種類數*10%+網絡評價*30%</h5>
                         <h5 class="text-center text-muted">室內遊戲室推薦度標準=面積*40%+可容納人數*30%+開放時長*30%</h5>
@@ -524,35 +519,38 @@
                         <button type="button" class="btn btn-lg btn-warning"id="rec2" >室內遊戲室</button>
                         </div>
                     </div>
-                     <!--室外星級推薦表格-->
-                        <div class="container">
-                         <div class="table-responsive" id="star1">
-                            <table id="table1" width="100%"  class="table table-bordered"></table>
-                        </div>
-                     </div>
-                     <div class="container" >
-                            <div class="table-responsive" id="star2">
-                            <table id="table2" width="100%"  class="table table-bordered"></table>
-                        </div>
-                     </div>
                 </div>
             </div>
+        </div>
 
-                    <!--室外遊樂場插入柱狀圖-->
-                    <div class="section"  >
-                            <div class="container" style="background-color: rgba(252, 192, 73, 0.315);">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3 class="text-center">室外遊樂場推薦度數量</h3>
-                                    <div id="chart"></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="text-center">室內遊戲室推薦度數量</h3>
-                                    <div id="chart1"></div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+        <!--室外星級推薦表格-->
+        <div class="container" >
+                <div class="table-responsive" id="star1">
+                    <table id="table1" width="100%"  class="table table-bordered"></table>
+                  </div>
+        </div>
+       
+        <div class="container" >
+        <div class="table-responsive" id="star2">
+                <table id="table2" width="100%"  class="table table-bordered"></table>
+            </div>
+        </div>
+
+        <!--室外遊樂場插入柱狀圖-->
+        <div class="section">
+            <div class="container" style="background-color:#F5F0E9;">
+              <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">室外遊樂場推薦度數量</h3>
+                    <div id="chart"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">室內遊戲室推薦度數量</h3>
+                    <div id="chart1"></div>
+                </div>
+              </div>
+            </div>
+        </div>
 
 
         <!--行程設計-->
@@ -560,7 +558,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="text-center" id="h1">— 行程設計 —</h1>
+                        <h1 class="text-center" id="h1">—— 行程設計 ——</h1>
                     </div>
                 </div>
                 <br>
@@ -576,9 +574,9 @@
                     <br>
                     <div class="col-md-12 text-center">
                         <div class="btn-group btn-group-lg">
-                            <a  class="btn btn-sm" id="showlocation4" onclick="show_districts4();" style="background-color: transparent;">❤Love, Sweet love</a>
-                            <a  class="btn btn-sm" id="showlocation5" onclick="show_districts5();" style="background-color: transparent;">☺Pretty Awsome</a>
-                            <a  class="btn btn-sm" id="showlocation6" onclick="show_districts6();" style="background-color: transparent;">✿OK</a>
+                            <a  class="btn btn-sm" id="showlocation4" onclick="show_districts4();">❤Love, Sweet love</a>
+                            <a  class="btn btn-sm" id="showlocation5" onclick="show_districts5();">☺Pretty Awsome</a>
+                            <a  class="btn btn-sm" id="showlocation6" onclick="show_districts6();">✿OK</a>
                         </div>
                     </div>
                 </div>
@@ -593,7 +591,7 @@
 
 
         <!--頁腳-->
-        <footer class="section section-primary" id="footer" >
+        <footer class="section section-primary" id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">

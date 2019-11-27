@@ -22,6 +22,20 @@ $(document).ready(function() {
     });
     });
 
+//
+$(document).ready(function(){
+$(".counter-number").each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+});
 
 $(document).ready(function(){
 $(".navbar-nav li a").click(function (event) {
@@ -34,133 +48,54 @@ $(".navbar-nav li a").click(function (event) {
 });
 
 
+//counter彈出
+$(document).ready(function(){
+    $("#p1_1").hide(function() {
+    });
 
+    $("#p1_2").hide(function() {
+    });
+
+    $("#countd1").click(function() {
+        $("#p1_2").hide();
+        $("#p1_1").toggle(500);
+    })
+
+    $("#countd2").click(function() {
+        $("#p1_1").hide();
+        $("#p1_2").toggle(500);
+    })
+
+});
 
 //室外插入airtable
 $(document).ready(function(){
-    $("#age2_5").hide(function() {
+    $("#p2_2").hide(function() {
     });
 
-    $("#age5_12").hide(function() {
+    $("#p2_3").hide(function() {
     });
 
-    $("#共融樂園").hide(function() {
-    });
 
-    $("#特色主題").hide(function() {
-    });
-
-    $("#outdoor1").click(function() {
-        $("#age5_12").hide();
-        $("#共融樂園").hide();
-        $("#特色主題").hide();
-        $("#age2_5").toggle(500);
+    $("#btn1_1").click(function() {
+        $("#p2_2").hide();
+        $("#p2_3").hide();
+        $("#p2_1").toggle(500);
     })
 
-    $("#outdoor2").click(function() {
-        $("#age2_5").hide();
-        $("#共融樂園").hide();
-        $("#特色主題").hide();
-        $("#age5_12").toggle(500);
+    $("#btn1_2").click(function() {
+        $("#p2_1").hide();
+        $("#p2_3").hide();
+        $("#p2_2").toggle(500);
     })
 
-    $("#outdoor3").click(function() {
-        $("#age2_5").hide();
-        $("#age5_12").hide();
-        $("#特色主題").hide();
-        $("#共融樂園").toggle(500);
-    })
-
-    $("#outdoor4").click(function() {
-        $("#age2_5").hide();
-        $("#age5_12").hide();
-        $("#共融樂園").hide();
-        $("#特色主題").toggle(500);
+    $("#btn1_3").click(function() {
+        $("#p2_1").hide();
+        $("#p2_2").hide();
+        $("#p2_3").toggle(500);
     })
 });
 
-//室內插入airtable
-$(document).ready(function(){
-    $("#bsize").hide(function() {
-    });
 
-    $("#lpopulation").hide(function() {
-    });
 
-    $("#longtime").hide(function() {
-    });
 
-    $("#特色主題2").hide(function() {
-    });
-
-    $("#indoor1").click(function() {
-        $("#特色主題2").hide();
-        $("#lpopulation").hide();
-        $("#longtime").hide();
-        $("#bsize").toggle(500);
-    })
-
-    $("#indoor2").click(function() {
-        $("#bsize").hide();
-        $("#longtime").hide();
-        $("#特色主題2").hide();
-        $("#lpopulation").toggle(500);
-    })
-
-    $("#indoor3").click(function() {
-        $("#bsize").hide();
-        $("#lpopulation").hide();
-        $("#特色主題2").hide();
-        $("#longtime").toggle(500);
-    })
-
-    $("#indoor4").click(function() {
-        $("#bsize").hide();
-        $("#lpopulation").hide();
-        $("#longtime").hide();
-        $("#特色主題2").toggle(500);
-    })
-});
-
-//特色亮点插入airtable
-$(document).ready(function(){
-    $("#千秋").hide(function() {
-    });
-
-    $("#蹺蹺板").hide(function() {
-    });
-
-    $("#完善設施").hide(function() {
-    });
-
-    $("#寵物同樂").hide(function() {
-    });
-
-    $("#theme1").click(function() {
-        $("#蹺蹺板").hide();
-        $("#完善設施").hide();
-        $("#寵物同樂").hide();
-        $("#千秋").toggle(500);
-    })
-
-    $("#theme2").click(function() {
-        $("#千秋").hide();
-        $("#完善設施").hide();
-        $("#寵物同樂").hide();
-        $("#蹺蹺板").toggle(500);
-    })
-
-    $("#theme3").click(function() {
-        $("#千秋").hide();
-        $("#蹺蹺板").hide();
-        $("#寵物同樂").hide();
-        $("#完善設施").toggle(500);
-    })
-
-    $("#theme4").click(function() {
-        $("#千秋").hide();
-        $("#蹺蹺板").hide();
-        $("#完善設施").hide();
-        $("#寵物同樂").toggle(500);
-    })
-});
