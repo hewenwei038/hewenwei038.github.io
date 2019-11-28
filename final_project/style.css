@@ -263,3 +263,12 @@ background-color: rgba(234, 226, 183, 0.212);
   line-height: 1.3333333;
   border-radius: 6px;
 }
+
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  transition: .5s ease;
+}
+
+.col-md-3:hover .img-responsive {
+  opacity: 0.3;
+}
