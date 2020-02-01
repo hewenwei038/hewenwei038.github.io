@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>testing</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+            <script>
+                    $(document).ready(function(){
+                var student1 = {"name":"bernard","id":"1001","GPA":"3"};        
+                var student2 = {"name":"kitty","id":"1005","GPA":"3.5"};
+                var students = [];
+                students.push(student1);
+                students.push(student2);
+                    });
+                </script>
+    </body>
+
+</html>
+
+for (i=0;i<=students.length;i++) {document.write("<br>"+students[i].name+" "+students[i].id+" "+students[i].GPA+"<br>")}
