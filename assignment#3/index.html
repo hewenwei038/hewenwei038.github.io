@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MY PENSOO</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/font-lato.css" rel="stylesheet" type="text/css">
+    <link href="css/pingendo.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+<script>
+      function modal_handle(name, desc, picurl) {
+                 $("h3.modal-title").html(`${name}`);
+                 $(".modal-body").html(`<img src="${picurl}" style="max-height:200px;"
+                     class="img-responsive"><p>${desc}</p>`);
+                 $('#popup-photo').modal('show');
+     };// end modal_handle function
+
+     function topFunction() {
+         $('html, body').animate({scrollTop : 0},800);
+         return false;
+     }; // end topFunction
+</script>
+
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">∧</button>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="z-index:999" >
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span>MY PENSOO</span></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#cover">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="cover" id="cover">
+      <div class="cover-image" style="background-image : url('img/cover_pencils.jpg')"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color:#ccc">PENSOO WORLD</h1>
+            <p style="color:#ccc">Choose Your Favourite Pencils</p>
+            <br>
+            <br>
+            <a class="btn btn-lg btn-default" href="#p1">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="p1">
+    <h1 class="text-center" id="h1">— Choose Your Pencils —</h1>             
+    </div>
+
+
+    <br>
+    <div id="album">
+        <div class="container" id="album_items">
+        </div> <!-- end container -->
+    </div>
+
+<!-- Modal-->
+<div class="modal fade" id="popup-photo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 class="modal-title"></h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <p></p>
+                <p><a class="btn btn-default" data-dismiss="modal">Close</a> <button class="btn  btn-default"> Add to Cart </button></p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <footer class="section section-primary" style="background-color: #202332;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>MY PENSOO</h1>
+            <p>The World of PENSOO</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+<script>
+    
+    $(document).ready(function(){
+                var counter = 1;
+                var at_getapi = "https://api.airtable.com/v0/appM2MoR8raI0efOi/Imported%20table%202?api_key=keyoTyp67gQNhCiwu";
+                $.getJSON(at_getapi, function(result) {
+                    $.each(result.records, function(key,value) {
+                            var name = value.fields.name;
+                            var price = value.fields.price;
+                            var productID = value.fields.productID;
+                            var quantity = value.fields.quantity;
+                            var picurl = value.fields.picurl;
+                            var ranking = value.fields.ranking;
+                            var desc = value.fields.desc;
+                            if (counter == 1) {$("#album_items").append(`<div class="row">`)};
+                $("#album_items").append(` <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img height="auto" width="auto" src="${picurl}" class="img-responsive" style="max-height:200px;">
+                            <div class="card-body text-center">
+                            <h2 class="card-title">${name}</h2>
+                            <h1 class="card-title pricing-card-title">$ ${price}<small class="text-muted">/ per</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                            <li>Rating：${ranking} star</li>
+                            <li>Product Code:${productID}</li>
+                            <li>Stock Quantity：${quantity}</li>
+                           </ul>              
+                            <p><button class="btn  btn-default" onclick="modal_handle('${name}','${desc}','${picurl}')" data-toggle="modal" data-id="107" data-body="testing...">View Details</button>
+                              <button class="btn  btn-default"> Add to Cart </button></p>
+                            </div>
+                        </div>
+                    </div>`);
+                            counter = counter +1; // counter++;
+                            if (counter == 4) {
+                                $("#album_items").append(`<div class="/row">`);
+                                counter = 1;
+                            };
+
+                    }); // end each
+                }); // end getJSON
+            }); // end document ready
+
+</script>
+
+
+  <script>
+
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";}
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+    <script src="js/main.js"></script>
+</html>
